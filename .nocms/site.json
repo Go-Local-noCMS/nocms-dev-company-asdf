@@ -2,8 +2,7 @@
   "$schema": "./site.schema.json",
   "fmsKeys": [
     {
-      "fms": "sitelink",
-      "portfolio": "lejfvzd5bvjah52i3l73yzzm6a"
+      "fms": "sitelink"
     }
   ],
   "_notes": [
