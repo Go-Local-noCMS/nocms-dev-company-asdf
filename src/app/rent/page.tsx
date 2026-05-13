@@ -253,6 +253,9 @@ async function submitRental(input: SubmitInput): Promise<SubmitResult> {
     InsuranceCoverageID: insuranceCoverageId || -999,
     WaitingID: waitingId,
     ConcessionPlanID: -999,
+    // Dev tier: every rental is a test transaction so cards aren't actually
+    // charged. Flip to false once a real payment processor is wired in.
+    bTestMode: true,
   };
   const rental = await post<{ RT: Array<{ Ret_Code: number; Ret_Msg?: string | null }>; iLeaseNum?: number | null; iLedgerID?: number | null }>(
     "MoveInWithDiscount_v5",
